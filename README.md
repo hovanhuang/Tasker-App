@@ -67,9 +67,4 @@ docker images
 docker run -p 3000:3000 tasker-app-frontend
 ```
 
-# Oracle Cloud Container Service
-## Auth Token
-```
-7Xq2QO!SUFFTTSkn_2Fk
-```
 
