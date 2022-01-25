@@ -1,0 +1,24 @@
+2022-01-24 15:50:34 jdbc[12]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "TASK" not found; SQL statement:
+/* com.project.tasker.core.Task.findAll */ select task0_.id as id1_0_, task0_.date as date2_0_, task0_.reminder as reminder3_0_, task0_.title as title4_0_ from task task0_ [42102-200]
+2022-01-24 15:53:12 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "DATABASECHANGELOGLOCK" not found; SQL statement:
+SELECT COUNT(*) FROM PUBLIC.DATABASECHANGELOGLOCK [42102-200]
+2022-01-24 20:52:58 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "DATABASECHANGELOGLOCK" not found; SQL statement:
+SELECT COUNT(*) FROM PUBLIC.DATABASECHANGELOGLOCK [42102-200]
+2022-01-24 20:52:58 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "DATABASECHANGELOGLOCK" not found; SQL statement:
+SELECT COUNT(*) FROM PUBLIC.DATABASECHANGELOGLOCK [42102-200]
+2022-01-24 20:53:13 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "DATABASECHANGELOGLOCK" not found; SQL statement:
+SELECT COUNT(*) FROM PUBLIC.DATABASECHANGELOGLOCK [42102-200]
+2022-01-24 20:54:17 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "DATABASECHANGELOGLOCK" not found; SQL statement:
+SELECT COUNT(*) FROM PUBLIC.DATABASECHANGELOGLOCK [42102-200]
+2022-01-24 20:54:17 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "DATABASECHANGELOGLOCK" not found; SQL statement:
+SELECT COUNT(*) FROM PUBLIC.DATABASECHANGELOGLOCK [42102-200]
+2022-01-24 20:54:31 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "DATABASECHANGELOGLOCK" not found; SQL statement:
+SELECT COUNT(*) FROM PUBLIC.DATABASECHANGELOGLOCK [42102-200]
