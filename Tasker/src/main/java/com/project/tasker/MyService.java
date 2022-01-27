@@ -65,7 +65,7 @@ public class MyService extends Application<MyConfiguration> {
     }
 
     private void enableCROS(MyConfiguration configuration, Environment environment) {
-        //Enabling CROS to response a "Access-Control-Allow-Origin header"
+
         // Enable CORS headers
         final FilterRegistration.Dynamic cors =
                 environment.servlets().addFilter("CORS", CrossOriginFilter.class);

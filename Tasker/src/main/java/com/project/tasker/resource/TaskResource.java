@@ -25,6 +25,17 @@ public class TaskResource {
         return taskDao.findAll();
     }
 
+    @GET
+    @Path("/{id}")
+    @Produces(MediaType.APPLICATION_JSON)
+    @UnitOfWork
+    public Task getTaskById(@PathParam("id") long id) {
+        if(taskDao.findById(id).isPresent()){
+            return taskDao.findById(id).get();
+        }
+        return new Task();
+    }
+
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)

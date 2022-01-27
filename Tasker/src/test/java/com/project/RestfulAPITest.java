@@ -46,7 +46,7 @@ public class RestfulAPITest {
         Response response = getAllResponse();
         List<String> titles = response.jsonPath().get("title");
         Assertions.assertEquals(2, titles.size());
-        Assertions.assertEquals("task1", titles.get(0));
+        Assert.assertTrue(titles.contains("task1"));
     }
 
     @Test
@@ -56,7 +56,7 @@ public class RestfulAPITest {
         List<Long> entriesBeforeDeletion = responseBeforeDelete.jsonPath().get("id");
 
         //Delete Request
-        Long deleteId = 9L;
+        Long deleteId = 7L;
         Response response = given()
                 .header("Content-type", "application/json")
                 .when()
