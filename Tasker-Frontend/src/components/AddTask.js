@@ -1,9 +1,14 @@
 import { useState, useEffect } from "react";
-const AddTask = ({onAdd}) => {
+const AddTask = ({task, onAdd}) => {
     const [title, setText] = useState('');
     const [date, setDay] = useState('');
     const [reminder, setReminder] = useState(false);
-    async function fetchData() {
+    if(task !== null){
+        setText(task.title)
+        setDay(task.date)
+        setReminder(task.reminder)
+    }
+    async function postData() {
                 // POST request using fetch inside useEffect React hook
                 const requestOptions = {
                     method: 'POST',
@@ -12,8 +17,17 @@ const AddTask = ({onAdd}) => {
                 };
                 fetch('http://localhost:8080/task', requestOptions)
                     .then(response => response.json());
-            // empty dependency array means this effect will only run once (like componentDidMount in classes)
     }
+    async function updateData() {
+        // POST request using fetch inside useEffect React hook
+        const requestOptions = {
+            method: 'PUT',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ title: title, date:date, reminder: reminder})
+        };
+        fetch('http://localhost:8080/task', requestOptions)
+            .then(response => response.json());
+}
 
     const onSubmit = (e) => {
         e.preventDefault()
@@ -22,7 +36,12 @@ const AddTask = ({onAdd}) => {
             alert('Please add a task')
             return
         }
-        fetchData()
+        if(task === null){
+            postData()
+        }else {
+            updateData();
+        }
+        
         // onAdd( { title, date, reminder})
 
         setText('')

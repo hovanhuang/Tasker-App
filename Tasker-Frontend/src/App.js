@@ -21,17 +21,18 @@ function App() {
   const addTask = (task) => {
     console.log(task);
   }
+
+  // Find Task by id
+
+  // const fetchTask = (id) => {
+  //   fetch('http://localhost:8080/task/' + id, { method: 'GET' })
+  //   .then(response => response.json())
+  //   .then(data => {setTask})
+  // }
   // Delete Task
   const deleteTask = (id) => {
     // setTasks(tasks.filter((task) => task.id !== id));
     fetch('http://localhost:8080/task/' + id, { method: 'DELETE' })
-  }
-
-  // Toggle Reminder
-  const toggleReminder = (id) => {
-    setTasks(tasks.map((task) => 
-      task.id == id ? { ...task, reminder: !task.reminder } : task
-    ))
   }
 
   return (
@@ -40,12 +41,11 @@ function App() {
       onAdd = {() => setShowAddTask(!showAddTask)} 
       showAdd = {showAddTask}
       />
-      {showAddTask && <AddTask onAdd = {addTask}/>}
+      {showAddTask && <AddTask onAdd = {addTask} />}
       {tasks.length > 0 ?
         <Tasks
           tasks={tasks}
           onDelete={deleteTask}
-          onToggle={toggleReminder}
         />
         : 'No Tasks'}
     </div>

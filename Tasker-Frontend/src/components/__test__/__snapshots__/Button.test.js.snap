@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<button
+  className="btn"
+  data-testid="button"
+  style={
+    Object {
+      "backgroundColor": "black",
+    }
+  }
+>
+  Close
+</button>
+`;
